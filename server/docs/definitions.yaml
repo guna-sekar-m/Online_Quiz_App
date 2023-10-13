@@ -1,0 +1,44 @@
+
+paths:
+  /users/apigetactivitybyuser:
+    get:
+      summary: Get user activity by user ID
+      parameters:
+        - name: userId
+          in: query
+          description: User ID to retrieve activity for
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                userId:
+                  type: string
+                  description: User ID
+       
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+  /admin/apigetdashboardcardcount:
+    get:
+      summary: Get dashboardcount
+      responses:
+        200:
+          description: Successful response
+          schema:
+            type: array
+            items:
+              type: object
+             
+       
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+
